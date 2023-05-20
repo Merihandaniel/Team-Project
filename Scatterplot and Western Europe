@@ -1,0 +1,44 @@
+#ScatterPlot
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.scatterplot(data=df, x='Life Ladder', y='Log GDP Per Capita', hue='Regional Indicator', palette='bright')
+plt.title('Happiness vs. GDP by Region')
+plt.xlabel('Life Ladder')
+plt.ylabel('Log GDP Per Capita')
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.5)) 
+plt.show()
+
+# Western Europe Pre- Covid Plots
+countries = ['Luxembourg', 'Switzerland']
+columns = ['Life Ladder', 'Confidence In National Government', 'Log GDP Per Capita', 'Freedom To Make Life Choices',
+           'Perceptions Of Corruption']
+
+for country in countries:
+    country_data = pre_covid[pre_covid['Country Name'] == country]
+
+    country_data = country_data.melt(id_vars='Country Name', value_vars=columns, var_name='Indicator',
+                                     value_name='Value')
+
+    fig = px.bar(country_data, x='Indicator', y='Value', title=f"Pre-Covid Plot for {country}")
+    fig.update_layout(xaxis=dict(tickangle=15))  # Rotate x-axis labels by 15 degrees
+
+    fig.show()
+    
+    # Western Europe Post-Covid Plots
+    countries = ['Luxembourg', 'Switzerland']
+columns = ['Life Ladder', 'Confidence In National Government', 'Log GDP Per Capita', 'Freedom To Make Life Choices',
+           'Perceptions Of Corruption']
+
+for country in countries:
+    country_data = post_covid[post_covid['Country Name'] == country]
+
+    country_data = country_data.melt(id_vars='Country Name', value_vars=columns, var_name='Indicator',
+                                     value_name='Value')
+
+    fig = px.bar(country_data, x='Indicator', y='Value', title=f"Post-Covid Plot for {country}")
+    fig.update_layout(xaxis=dict(tickangle=15))  # Rotate x-axis labels by 15 degrees
+
+    fig.show()
+
