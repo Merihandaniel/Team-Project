@@ -1,0 +1,34 @@
+import seaborn as sns
+
+for regional_indicator in df['Regional Indicator'].unique():
+    data_subset = df[(df['Regional Indicator'] == regional_indicator) & (df['Year'] == 2022)]
+    
+    if not data_subset.empty:
+        plt.figure(figsize=(10, 6))
+        sns.violinplot(x='Regional Indicator', y='Life Ladder', data=data_subset)
+        plt.title(f"Violin Plot - {regional_indicator} (2022)")
+        plt.xlabel('Regional Indicator')
+        plt.ylabel('Life Ladder')
+        plt.show()
+       
+import plotly.graph_objects as go
+import pandas as pd
+
+
+fig = go.Figure()
+
+for regional_indicator in df['Regional Indicator'].unique():
+    data_subset = df[(df['Regional Indicator'] == regional_indicator) & (df['Year'] == 2022)]
+    
+    if not data_subset.empty:
+        fig.add_trace(go.Violin(x=data_subset['Regional Indicator'],
+                                y=data_subset['Life Ladder'],
+                                name=regional_indicator,
+                                box_visible=True,
+                                meanline_visible=True))
+
+fig.update_layout(title="Violin Plot - Life Ladder by Regional Indicator (2022)",
+                  xaxis_title="Regional Indicator",
+                  yaxis_title="Life Ladder")
+
+fig.show()
