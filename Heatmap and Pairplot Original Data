@@ -1,0 +1,9 @@
+# Heatmap
+
+plt.figure(figsize=(15,10))
+sns.heatmap(df.corr(), cbar=True, annot=True)
+
+# Pairplot
+
+sns.pairplot(subplot, hue='Regional Indicator', palette='bright')
+plt.show()
