@@ -1,0 +1,34 @@
+#Central and Eastern Europe
+#Pre-Covid
+
+countries = ['Lithuania', 'Slovenia']
+columns = ['Life Ladder', 'Confidence In National Government', 'Log GDP Per Capita', 'Freedom To Make Life Choices',
+           'Perceptions Of Corruption']
+
+for country in countries:
+    country_data = pre_covid[pre_covid['Country Name'] == country]  # Fix the column name
+
+    country_data = country_data.melt(id_vars='Country Name', value_vars=columns, var_name='Indicator',
+                                     value_name='Value')
+
+    fig = px.bar(country_data, x='Indicator', y='Value', title=f"Pre-Covid Plot for {country}")
+    fig.update_layout(xaxis=dict(tickangle=25))  # Rotate x-axis labels by 90 degrees
+
+    fig.show()
+    
+    #Post Covid 
+    
+    countries = ['Lithuania', 'Slovenia']
+columns = ['Life Ladder', 'Confidence In National Government', 'Log GDP Per Capita', 'Freedom To Make Life Choices',
+           'Perceptions Of Corruption']
+
+for country in countries:
+    country_data = post_covid[post_covid['Country Name'] == country]  # Fix the column name
+
+    country_data = country_data.melt(id_vars='Country Name', value_vars=columns, var_name='Indicator',
+                                     value_name='Value')
+
+    fig = px.bar(country_data, x='Indicator', y='Value', title=f"Post-Covid Plot for {country}")
+    fig.update_layout(xaxis=dict(tickangle=25))  # Rotate x-axis labels by 90 degrees
+
+    fig.show()
