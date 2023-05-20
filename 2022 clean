@@ -1,0 +1,18 @@
+
+grouped_data = df.groupby(['Year', 'Regional Indicator'])
+
+top_countries_list = []
+
+for index, (group_name, group_data) in enumerate(grouped_data, start=1):
+    
+    top_countries = group_data.nlargest(3, 'Log GDP Per Capita')
+    
+    
+    top_countries_list.append((index, group_name[0], top_countries))
+
+
+for index, year, top_countries in top_countries_list:
+    print(f"Index: {index}")
+    print(f"Year: {year}")
+    print(top_countries)
+    print()
