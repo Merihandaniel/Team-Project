@@ -2,7 +2,7 @@
 
 Welcome to our project exploring the world of happiness and its potential connection to the COVID-19 pandemic. In this analysis, we delve into the World Happiness Report dataset to investigate whether the global health crisis has had an impact on people's well-being. Our main research question is how did the prevalence of happiness change between the pre-COVID and post-COVID eras in world countries, considering economic and social factors? 
 
-##Our Dataset
+**Our Dataset**
 
 
 Our primary data source for this project is the World Happiness Report dataset, which we obtained from Kaggle (https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present), a platform for data science enthusiasts and professionals. The dataset provides valuable insights into happiness scores and various factors contributing to happiness across different countries and years.
@@ -23,10 +23,10 @@ The dataset contained 13 varibles:
 13. Country name 
 
 
-##Data: Handling Null Values, Top GDP Countries, and Pre/Post-COVID Split
+**Data: Handling Null Values, Top GDP Countries, and Pre/Post-COVID Split**
 
 
-In order to handle Null values for Regional indicators, such as Eastern Europe...etc, we used linear regression model to perform regression imputation where we learn to predict missing values based on the available data.
+In order to handle Null values for numerical varaibles, we used linear regression model to perform regression imputation where we learn to predict missing values based on the available data.
 
 ``` import re 
 
@@ -49,17 +49,18 @@ holder = np.unique(unique_values)
 #print the unique values
 print(np.unique(unique_values))
 ```
-Afterwards, for numerical values that were null for the the other varaibles, we created a function 
+Afterwards, we developed a function to handle regional indicators. This function utilized a dictionary to assign the correct countries to their respective regions.
+
+
+![Missing Value Clean Set](/Users/merihandaniel/Desktop/clear.png | width=500)
+
+
+
 
 For our literature review, we utlizied the following findings:
 https://www.scirp.org/journal/paperinformation.aspx?paperid=92906
 https://worldhappiness.report/ed/2022/
 https://www.worldvaluessurvey.org/WVSContents.jsp
-
-
-
-
-
 
 ## Conclusion
 
