@@ -52,7 +52,7 @@ print(np.unique(unique_values))
 Afterwards, we developed a function to handle regional indicators. This function utilized a dictionary to assign the correct countries to their respective regions.
 
 
-![Missing Value Clean Set](clear.png)
+![Missing Value Clean Set](clear.png | width = 500)
 
 
 
