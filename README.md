@@ -49,7 +49,7 @@ holder = np.unique(unique_values)
 #print the unique values
 print(np.unique(unique_values))
 ```
-Afterwards, we developed a function to handle regional indicators. This function utilized a dictionary to assign the correct countries to their respective regions.
+Afterwards, we developed a function to handle regional indicators. This function utilized a dictionary to assign the correct countries to their respective regions. As result the variables that we intened to use to test our hypothesis, were 
 
 
 <img src="clear.png" alt="Missing Values Dataset" width="400">
