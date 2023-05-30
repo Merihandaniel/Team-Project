@@ -8,7 +8,7 @@ Our primary data source for this project is the World Happiness Report dataset, 
 
 In order to handle Null values for Regional indicators, such as Eastern Europe...etc, we used linear regression model to perform regression imputation where we learn to predict missing values based on the available data.
 
-'''import re 
+``` import re 
 
 #get the unique values that are NA in regional
 
@@ -27,7 +27,7 @@ for i,row in df.iterrows():
 holder = np.unique(unique_values)
 
 #print the unique values
-print(np.unique(unique_values))'''
+print(np.unique(unique_values))```
 
 
 
