@@ -59,7 +59,17 @@ Afterwards, we developed a function to handle regional indicators. This function
 
 <img src="clear.png" alt="Missing Values Dataset" width="400">
 
-After cleaning, we were able to comapre
+Second factor we took into consideration is picking the top two countries with the highest Log DGP per region. 
+
+Lastly, we used pre COVID era (2017-2019) and post COVID era (2020-2022). to comapre and contrast countries. 
+
+**Visual Presentation of Findings
+
+After cleaning, we were able to apply several plots to comapre and contrast, such as violin plot, heatmapt, bar plot, and sunburst plot. By using variety of plots,we were able to see small differences between pre and post covid on happiness in countries across many regions. 
+
+
+<img src="heatmap.png" alt="Correlation Matrix" width="400">
+
 
 ## Conclusion
 
