@@ -2,7 +2,7 @@
 
 Welcome to our project exploring the world of happiness and its potential connection to the COVID-19 pandemic. In this analysis, we delve into the World Happiness Report dataset to investigate whether the global health crisis has had an impact on people's well-being. Our main research question is how did the prevalence of happiness change between the pre-COVID and post-COVID eras in world countries, considering economic and social factors? 
 
-**Dataset**
+## Dataset
 
 
 Our primary data source for this project is the World Happiness Report dataset, which we obtained from Kaggle (https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present), a platform for data science enthusiasts and professionals. The dataset provides valuable insights into happiness scores and various factors contributing to happiness across different countries and years.
@@ -28,7 +28,7 @@ Our choices for the these varaibles were based on the following literature:
 2. https://worldhappiness.report/ed/2022/
 3. https://www.worldvaluessurvey.org/WVSContents.jsp
 
-**Data: Handling Null Values, Top GDP Countries, and Pre/Post-COVID Split**
+## Data: Handling Null Values, Top GDP Countries, and Pre/Post-COVID Split**
 
 
 In order to handle Null values for numerical varaibles, we used linear regression model to perform regression imputation where we learn to predict missing values based on the available data.
@@ -59,11 +59,11 @@ Afterwards, we developed a function to handle regional indicators. This function
 
 <img src="clear.png" alt="Missing Values Dataset" width="400">
 
-Second factor we took into consideration is picking the top two countries with the highest Log DGP per region. 
+Second factor, we took into consideration is picking the top two countries with the highest Log DGP per region. 
 
 Lastly, we used pre COVID era (2017-2019) and post COVID era (2020-2022). to comapre and contrast countries. 
 
-**Visual Presentation of Findings
+## Visual Presentation of Findings
 
 After cleaning, we were able to apply several plots to comapre and contrast, such as violin plot, heatmapt, bar plot, and sunburst plot. By using variety of plots,we were able to see small differences between pre and post covid on happiness in countries across many regions. 
 
@@ -71,7 +71,7 @@ After cleaning, we were able to apply several plots to comapre and contrast, suc
 <img src="heatmap.png" alt="Correlation Matrix" width="400">
 
 
-**Conclusion**
+## Conclusion
 
 Our analysis of the World Happiness Report dataset reveals that COVID-19 has impacted happiness levels differently across countries. Several factors contribute to this variation, including cultural differences, the strictness of lockdown measures, cultural values, political factors, and consumerism.
 
