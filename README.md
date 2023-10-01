@@ -1,4 +1,4 @@
-**World Happiness Report: Exploring the Impact of COVID-19 on Happiness**
+## World Happiness Report: Exploring the Impact of COVID-19 on Happiness**
 
 Welcome to our project exploring the world of happiness and its potential connection to the COVID-19 pandemic. In this analysis, we delve into the World Happiness Report dataset to investigate whether the global health crisis has had an impact on people's well-being. Our main research question is how did the prevalence of happiness change between the pre-COVID and post-COVID eras in world countries, considering economic and social factors? 
 
